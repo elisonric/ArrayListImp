@@ -30,4 +30,5 @@ public class NodeImpl<T> {
     public String toString() {
         return "{\n" + value + "\n}";
     }
+
 }

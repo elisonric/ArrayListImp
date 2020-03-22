@@ -32,8 +32,22 @@ public class Main {
         a.add(new Carro("Hb20", 2020));
         a.add(new Carro("Celta", 2019));
         a.add(new Carro("Gol", 2010));
-        a.add(new Carro("Fit", 2015));
+        a.add(new Carro("Fit", 2015), 2);
         System.out.println(a.toString());
+
+        System.out.println(a.isEmpty());
+        System.out.println(a.size());
+//        a.clear();
+//        System.out.println(a.remove(1));
+//        System.out.println(a.removeFirst(new Carro("Celta", 2019)));
+
+        System.out.println(a.indexOf(new Carro("Celta", 2019)));
+        System.out.println(a.lastIndexOf(new Carro("Celta", 2019)));
+        System.out.println("AFTER-------------------");
+        System.out.println(a.toString());
+
+        a.toArray();
+
     }
 
     public static class Carro {
