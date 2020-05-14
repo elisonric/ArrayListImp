@@ -1,7 +1,4 @@
-import arrayListImpl.ArrayListImpl;
-import linkedListImpl.LinkedListImpl;
-
-import java.util.Arrays;
+import FilaVectorImpl.FilaVectorImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,25 +25,36 @@ public class Main {
 //        System.out.println(array.size());
 //        System.out.println(Arrays.toString(array.toArray()));
 
-        LinkedListImpl<Carro> a = new LinkedListImpl<>();
-        a.add(new Carro("Hb20", 2020));
-        a.add(new Carro("Celta", 2019));
-        a.add(new Carro("Gol", 2010));
-        a.add(new Carro("Fit", 2015), 2);
-        System.out.println(a.toString());
+//        LinkedListImpl<Carro> a = new LinkedListImpl<>();
+//        a.add(new Carro("Hb20", 2020));
+//        a.add(new Carro("Celta", 2019));
+//        a.add(new Carro("Gol", 2010));
+//        a.add(new Carro("Fit", 2015), 2);
+//        System.out.println(a.toString());
+//
+//        System.out.println(a.isEmpty());
+//        System.out.println(a.size());
+////        a.clear();
+////        System.out.println(a.remove(1));
+////        System.out.println(a.removeFirst(new Carro("Celta", 2019)));
+//
+//        System.out.println(a.indexOf(new Carro("Celta", 2019)));
+//        System.out.println(a.lastIndexOf(new Carro("Celta", 2019)));
+//        System.out.println("AFTER-------------------");
+//        System.out.println(a.toString());
+//
+//        a.toArray();
 
-        System.out.println(a.isEmpty());
-        System.out.println(a.size());
-//        a.clear();
-//        System.out.println(a.remove(1));
-//        System.out.println(a.removeFirst(new Carro("Celta", 2019)));
+        FilaVectorImpl a = new FilaVectorImpl(4);
+        a.insert(1);
+        a.insert(2);
+        a.insert(3);
+        a.insert(4);
+        System.out.println(a.remove());
+        a.insert(5);
+        System.out.println(a.remove());
 
-        System.out.println(a.indexOf(new Carro("Celta", 2019)));
-        System.out.println(a.lastIndexOf(new Carro("Celta", 2019)));
-        System.out.println("AFTER-------------------");
-        System.out.println(a.toString());
 
-        a.toArray();
 
     }
 

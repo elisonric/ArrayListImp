@@ -1,14 +1,15 @@
-package FilaVector;
+package FilaVectorImpl;
 
-public class FilaVector {
+public class FilaVectorImpl {
 
     private Object[] vector;
     private int first;
     private int last;
     public int length;
 
-    public FilaVector() {
-        this.vector = new Object[10];
+
+    public FilaVectorImpl(int length) {
+        this.vector = new Object[length];
         this.first = 0;
         this.last = 0;
         this.length = 0;
