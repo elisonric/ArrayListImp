@@ -1,9 +1,10 @@
-package arrayListImp;
+package arrayListImpl;
 
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class ArrayListImp <T> {
+public class
+ArrayListImpl<T> {
 
     private Object[] vector;
     private int counter;
@@ -12,16 +13,16 @@ public class ArrayListImp <T> {
     @SuppressWarnings("FieldCanBeLocal")
     private int resizeSize = 5;
 
-    public ArrayListImp() {
+    public ArrayListImpl() {
         this.vector = new Object[10];
     }
 
-    public ArrayListImp(int size) {
+    public ArrayListImpl(int size) {
         this.vector = new Object[size];
         this.initialCapacity = counter;
     }
 
-    public ArrayListImp(int size, boolean resize) {
+    public ArrayListImpl(int size, boolean resize) {
         this.initialCapacity = size;
         this.resize = resize;
         this.vector = new Object[counter];
