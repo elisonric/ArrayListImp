@@ -1,3 +1,4 @@
+import stack.StackLinkedListImpl;
 import stack.StackVectorImpl;
 
 public class Main {
@@ -64,7 +65,19 @@ public class Main {
 //        System.out.println(a.remove());
 
 
-        StackVectorImpl p = new StackVectorImpl();
+//        StackVectorImpl p = new StackVectorImpl();
+//
+//        p.push(5);
+//        p.push(4);
+//        p.push(3);
+//        p.push(2);
+//        p.push(1);
+//
+//        while (!p.isEmpty()) {
+//            System.out.println(p.pop());
+//        }
+
+        StackLinkedListImpl<Integer> p = new StackLinkedListImpl<Integer>();
 
         p.push(5);
         p.push(4);
