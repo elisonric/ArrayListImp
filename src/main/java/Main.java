@@ -1,5 +1,4 @@
-import pileVector.PileVector;
-import queueLinkedListImpl.QueueLinkedListImpl;
+import stack.StackVectorImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,7 +64,7 @@ public class Main {
 //        System.out.println(a.remove());
 
 
-        PileVector p = new PileVector();
+        StackVectorImpl p = new StackVectorImpl();
 
         p.push(5);
         p.push(4);

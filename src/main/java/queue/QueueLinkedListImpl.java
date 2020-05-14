@@ -1,4 +1,4 @@
-package queueLinkedListImpl;
+package queue;
 
 import linkedListImpl.NodeImpl;
 

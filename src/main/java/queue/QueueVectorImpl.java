@@ -1,4 +1,4 @@
-package queueVectorImpl;
+package queue;
 
 public class QueueVectorImpl {
 

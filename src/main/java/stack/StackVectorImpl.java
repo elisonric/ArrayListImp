@@ -1,11 +1,11 @@
-package pileVector;
+package stack;
 
-public class PileVector {
+public class StackVectorImpl {
 
     private Object[] vector;
     int topIndex;
 
-    public PileVector() {
+    public StackVectorImpl() {
         this.vector = new Object[10];
         topIndex = -1;
     }
