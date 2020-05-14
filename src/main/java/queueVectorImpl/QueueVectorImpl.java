@@ -1,6 +1,6 @@
-package FilaVectorImpl;
+package queueVectorImpl;
 
-public class FilaVectorImpl {
+public class QueueVectorImpl {
 
     private Object[] vector;
     private int first;
@@ -8,7 +8,7 @@ public class FilaVectorImpl {
     public int length;
 
 
-    public FilaVectorImpl(int length) {
+    public QueueVectorImpl(int length) {
         this.vector = new Object[length];
         this.first = 0;
         this.last = 0;

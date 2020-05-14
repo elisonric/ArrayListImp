@@ -1,4 +1,5 @@
-import FilaVectorImpl.FilaVectorImpl;
+import pileVector.PileVector;
+import queueLinkedListImpl.QueueLinkedListImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,17 +46,36 @@ public class Main {
 //
 //        a.toArray();
 
-        FilaVectorImpl a = new FilaVectorImpl(4);
-        a.insert(1);
-        a.insert(2);
-        a.insert(3);
-        a.insert(4);
-        System.out.println(a.remove());
-        a.insert(5);
-        System.out.println(a.remove());
+//        FilaVectorImpl a = new FilaVectorImpl(4);
+//        a.insert(1);
+//        a.insert(2);
+//        a.insert(3);
+//        a.insert(4);
+//        System.out.println(a.remove());
+//        a.insert(5);
+//        System.out.println(a.remove());
+
+//        QueueLinkedListImpl a = new QueueLinkedListImpl<Integer>();
+//        a.insert(1);
+//        a.insert(2);
+//        a.insert(3);
+//        a.insert(4);
+//        System.out.println(a.remove());
+//        a.insert(5);
+//        System.out.println(a.remove());
 
 
+        PileVector p = new PileVector();
 
+        p.push(5);
+        p.push(4);
+        p.push(3);
+        p.push(2);
+        p.push(1);
+
+        while (!p.isEmpty()) {
+            System.out.println(p.pop());
+        }
     }
 
     public static class Carro {
