@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ArrayListImp.iml" filepath="$PROJECT_DIR$/.idea/ArrayListImp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EstruturasJava.iml" filepath="$PROJECT_DIR$/EstruturasJava.iml" />
     </modules>
   </component>
 </project>
