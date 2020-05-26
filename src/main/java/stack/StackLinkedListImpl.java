@@ -5,7 +5,7 @@ import linkedListImpl.NodeImpl;
 public class StackLinkedListImpl<T> {
 
     private NodeImpl<T> top = null;
-    int topIndex;
+    public int topIndex;
 
     public StackLinkedListImpl() {
         topIndex = -1;
@@ -42,4 +42,6 @@ public class StackLinkedListImpl<T> {
         }
         return this.top.getValue();
     }
+
+    public T getIndex(Integer index)
 }
