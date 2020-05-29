@@ -43,5 +43,40 @@ public class StackLinkedListImpl<T> {
         return this.top.getValue();
     }
 
-    public T getIndex(Integer index)
+    public T get(int index) {
+        return getInstance(index) == null ? null : getInstance(index).getValue();
+    }
+
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        string.append("[");
+        if (top != null) {
+            toString(string, top);
+        }
+        string.append("]");
+        return string.toString();
+    }
+
+    private void toString(StringBuilder string, NodeImpl<T> node) {
+        string.append(node.toString());
+        if (node.getNext() != null) {
+            string.append(",");
+            toString(string, node.getNext());
+        }
+    }
+
+    private NodeImpl<T> getInstance(int index) {
+        if (index > topIndex -1 || index < 0) {
+            return null;
+        } else {
+            NodeImpl<T> node = top;
+            for (int j = 0; j <= index; j++) {
+                if (j == index) {
+                    return node;
+                }
+                node = node.getNext();
+            }
+            return null;
+        }
+    }
 }

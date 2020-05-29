@@ -1,0 +1,12 @@
+
+m
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(‰ñ›¼üÿÿÿÿ8ßøô¥.
+c
+java:S1126,"AReplace this if-then-else statement by a single return statement.(‡Ù½ßÿÿÿÿÿ8¡âĞ¥.
+Q
+java:S1068	"/Remove this unused "middleStack" private field.(öÄˆ¤ıÿÿÿÿ8 â·‹¥.
+C	java:S131""Add a default case to this switch.(‰ñ›¼üÿÿÿÿ8ßøô¥.
+P
+java:S1172".Remove this unused method parameter "destiny".(—õóîøÿÿÿÿ8ßøô¥.
+D
+java:S1068"(Remove this unused "size" private field.(‰öÆ)8”ÒÏ‹¥.
