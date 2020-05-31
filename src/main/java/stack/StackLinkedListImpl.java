@@ -5,11 +5,9 @@ import linkedListImpl.NodeImpl;
 public class StackLinkedListImpl<T> {
 
     private NodeImpl<T> top = null;
-    public int topIndex;
+    public int topIndex = 0;
 
-    public StackLinkedListImpl() {
-        topIndex = -1;
-    }
+    public StackLinkedListImpl() {}
 
     public void push(T value) {
         NodeImpl<T> node = new NodeImpl<T>(value, null);
@@ -33,7 +31,7 @@ public class StackLinkedListImpl<T> {
     }
 
     public boolean isEmpty() {
-        return topIndex == -1;
+        return top == null;
     }
 
     public T top() {

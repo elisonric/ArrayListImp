@@ -7,10 +7,9 @@ import java.util.Scanner;
 public class Hanoi {
 
     private int size;
-    private String resultGame;
-    private StackLinkedListImpl leftStack;
-    private StackLinkedListImpl middleStack;
-    private StackLinkedListImpl rightStack;
+    private StackLinkedListImpl<Integer> leftStack;
+    private StackLinkedListImpl<Integer> middleStack;
+    private StackLinkedListImpl<Integer> rightStack;
     Scanner sc = new Scanner(System.in);
 
     public Hanoi() {
@@ -19,25 +18,15 @@ public class Hanoi {
         this.middleStack = new StackLinkedListImpl<Integer>();
         this.rightStack = new StackLinkedListImpl<Integer>();
 
-        calculateResultGame();
         createHanoi(size);
         play();
-    }
-
-    private void calculateResultGame() {
-        StringBuilder string = new StringBuilder();
-        string.append("[");
-        for (int i = 1; i < this.size; i++) {
-            string.append(i);
-        }
-        string.append("]");
-        this.resultGame = string.toString();
     }
 
     private void createHanoi(Integer size) {
         for (int i = size; i > 0; i--) {
             leftStack.push(i);
         }
+
     }
 
     private void play() {
@@ -45,7 +34,7 @@ public class Hanoi {
             menu();
         } while (!checkCompletion());
         showTowers();
-        System.out.println("Parabens você conseguiu!");
+        System.out.println("Parabéns você conseguiu!");
     }
 
     private void menu() {
@@ -56,18 +45,28 @@ public class Hanoi {
         do {
             System.out.println("Origem: ");
             origin = this.sc.nextInt();
-        } while (origin != 1 && origin != 2 && origin != 3);
+            if (isValideRange(origin)) {
+            	System.out.println("Valor inválido, tente novamente");
+            }
+        } while (isValideRange(origin));
 
         do {
             System.out.println("Destino: ");
             destiny = this.sc.nextInt();
-        } while (destiny != 1 && destiny != 2 && destiny != 3 && destiny != origin);
+            if (isValideRange(destiny)) {
+            	System.out.println("Valor inválido, tente novamente");
+            }
+        } while (isValideRange(destiny));
         move(TowersEnum.getTowerByCode(origin), TowersEnum.getTowerByCode(destiny));
+    }
+    
+    private boolean isValideRange(Integer value) {
+    	return value < 1 || value > 3;
     }
 
     private void move(TowersEnum origin, TowersEnum destiny) {
-        StackLinkedListImpl originStack = null;
-        StackLinkedListImpl destinyStack = null;
+        StackLinkedListImpl<Integer> originStack = null;
+        StackLinkedListImpl<Integer> destinyStack = null;
         if (origin.getValue() == TowersEnum.LEFTSTACk.getValue()) {
             originStack = leftStack;
         } else if (origin.getValue() == TowersEnum.MIDDLESTACK.getValue()) {
@@ -98,28 +97,19 @@ public class Hanoi {
     }
 
     private boolean checkCompletion() {
-        return this.rightStack.topIndex == 4 && this.rightStack.toString().equals(this.resultGame);
+    	return this.rightStack.topIndex == 5 && this.rightStack.get(0) == 1 && this.rightStack.get(4) == 5;
     }
 
     private void showTowers() {
         StringBuilder towers = new StringBuilder();
         for (int i = 0; i < 5; i++) {
-                towers.append(leftStack.get(i) == null ? " | " : (int)leftStack.get(i));
-                towers.append(middleStack.get(i) == null ? " | " : (int)middleStack.get(i));
-                towers.append(rightStack.get(i) == null ? " | " : (int)rightStack.get(i));
+                towers.append(leftStack.get(i) == null ? "-" : (int)leftStack.get(i)).append("|");
+                towers.append(middleStack.get(i) == null ? "-" : (int)middleStack.get(i)).append("|");
+                towers.append(rightStack.get(i) == null ? "-" : (int)rightStack.get(i)).append("|");
                 towers.append("\n");
         }
-        System.out.println();
         System.out.println(towers);
-        System.out.println("===================================");
-    }
-
-    private String createDisc(int number) {
-        StringBuilder disc = new StringBuilder();
-        for (int i = 0; i < number; i++) {
-            disc.append("-");
-        }
-        return disc.toString();
+        System.out.println("==============================================================================");
     }
 }
 
